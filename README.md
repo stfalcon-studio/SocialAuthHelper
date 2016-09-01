@@ -94,7 +94,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 ###Vkontakte
-Create new application at https://vk.com/apps<br />
+Create new application at https://vk.com/dev<br />
 In your activity(fragment) class declare field:
 ```java
 private VkClient vkClient;
