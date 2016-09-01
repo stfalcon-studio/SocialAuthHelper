@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.stfalcon.socialauthhelper_sample.MainActivity">
+
+        <RelativeLayout
+            android:id="@+id/rl_twitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_twitter"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/tw__blue_default"
+                android:text="twitter" />
+
+            <ImageView
+                android:id="@+id/iv_twitter"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_below="@id/btn_twitter"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_twitter"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/iv_twitter" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_vk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_twitter">
+
+            <Button
+                android:id="@+id/btn_vk"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/tw__blue_pressed"
+                android:text="VK" />
+
+            <ImageView
+                android:id="@+id/iv_vk"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_below="@id/btn_vk"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_vk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_vk"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/iv_vk" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_vk">
+
+            <Button
+                android:id="@+id/btn_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/com_facebook_blue"
+                android:text="facebook" />
+
+            <ImageView
+                android:id="@+id/iv_facebook"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_below="@id/btn_facebook"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_facebook"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/iv_facebook" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_google"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_facebook">
+
+            <Button
+                android:id="@+id/btn_google"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/tw__composer_red"
+                android:text="google" />
+
+            <ImageView
+                android:id="@+id/iv_google"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_below="@id/btn_google"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_google"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/iv_google" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_instagram"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_google">
+
+            <Button
+                android:id="@+id/btn_instagram"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/com_facebook_button_background_color_disabled"
+                android:text="instagram" />
+
+            <ImageView
+                android:id="@+id/iv_instagram"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_below="@id/btn_instagram"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_instagram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btn_instagram"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/iv_instagram" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

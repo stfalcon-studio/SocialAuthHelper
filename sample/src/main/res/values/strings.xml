@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SocialAuthHelper</string>
+    <string name="facebook_app_id">292446811126202</string>
+    <string name="twitterConsumerKey">GpiqBsOZiIwApJVcPQ72mgESz</string>
+    <string name="twitterConsumerSecret">UoiX7PzvZlVHUZR92nLijuS08rIw50Z5WtWYYNqD95eyH78XWW</string>
+    <string name="vk_redirect_uri">https://oauth.vk.com/blank.html</string>
+    <string name="vk_client_id">5612084</string>
+    <string name="googleClientId">820572733892-hv04fkilu3hci4l6hp2glqngah7ghqvu.apps.googleusercontent.com</string>
+    <string name="instagramRedirectUri">https://oauth.vk.com/blank.html</string>
+    <string name="instagramClientId">b84dfb827993472a95112a33ecf924df</string>
+    <string name="profileInfo">Name: %1$s\nid: %2$s\nAccess Token: %3$s</string>
+</resources>
