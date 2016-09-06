@@ -1,3 +1,22 @@
+/*
+ * Copyright 2016 stfalcon.com
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * Created by Anton Bevza
+ *
+ */
+
 package com.stfalcon.socialauthhelper_sample;
 
 import android.content.Intent;
@@ -44,23 +63,25 @@ public class MainActivity extends AppCompatActivity {
 
     private void initTwitter() {
         TwitterAuthConfig authConfig = new TwitterAuthConfig(
-                getString(R.string.twitterConsumerKey),
-                getString(R.string.twitterConsumerSecret));
-
+                getString(R.string.twitterConsumerKey),//twitter application consumer key
+                getString(R.string.twitterConsumerSecret));//twitter application consumer secret
+        //setup fabric
         Fabric.with(this, new Twitter(authConfig));
 
         twitterClient = new TwitterClient(this);
-
+        //init views
         final Button btnTwitter = (Button) findViewById(R.id.btn_twitter);
         final TextView tvTwitter = (TextView) findViewById(R.id.tv_twitter);
         final ImageView ivTwitter = (ImageView) findViewById(R.id.iv_twitter);
 
+        //set onClick event for auth button
         btnTwitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 twitterClient.getUser(new TwitterClient.UserLoadListener() {
                     @Override
                     public void onUserLoaded(User user, String profileImage) {
+                        //after authorization successful you have access to user profile and Access Token
                         tvTwitter.setText(getString(R.string.profileInfo,
                                 user.name,
                                 user.getId(),
@@ -75,18 +96,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initVk() {
-        vkClient = new VkClient(this, getString(R.string.vk_redirect_uri), getString(R.string.vk_client_id));
+        vkClient = new VkClient(this, //activity or fragment
+                getString(R.string.vk_redirect_uri),//vk application redirect uri
+                getString(R.string.vk_client_id)); //vk application id
 
+        //init views
         final Button btnVk = (Button) findViewById(R.id.btn_vk);
         final TextView tvVk = (TextView) findViewById(R.id.tv_vk);
         final ImageView ivVk = (ImageView) findViewById(R.id.iv_vk);
 
+        //set onClick event for auth button
         btnVk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 vkClient.getProfile(new VkClient.DataLoadedListener<VkProfile>() {
                     @Override
                     public void onDataLoaded(VkProfile vkProfile) {
+                        //after authorization successful you have access to user profile and Access Token
                         tvVk.setText(getString(R.string.profileInfo,
                                 vkProfile.getFirstName() + " " + vkProfile.getLastName(),
                                 vkProfile.getId(),
@@ -102,16 +128,19 @@ public class MainActivity extends AppCompatActivity {
     private void initFacebook() {
         facebookClient = new FacebookClient(this);
 
+        //init views
         final Button btnFacebook = (Button) findViewById(R.id.btn_facebook);
         final TextView tvFacebook = (TextView) findViewById(R.id.tv_facebook);
         final ImageView ivFacebook = (ImageView) findViewById(R.id.iv_facebook);
 
+        //set onClick event for auth button
         btnFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 facebookClient.getProfile(new FacebookClient.FbResultCallback() {
                     @Override
                     public void onProfileLoaded(FacebookProfile facebookProfile) {
+                        //after authorization successful you have access to user profile and Access Token
                         tvFacebook.setText(getString(R.string.profileInfo,
                                 facebookProfile.getName(),
                                 facebookProfile.getId(),
@@ -129,16 +158,19 @@ public class MainActivity extends AppCompatActivity {
     private void initGooglePlus() {
         googlePlusClient = new GooglePlusClient(this, getString(R.string.googleClientId));
 
+        //init views
         final Button btnGoogle = (Button) findViewById(R.id.btn_google);
         final TextView tvGoogle = (TextView) findViewById(R.id.tv_google);
         final ImageView ivGoogle = (ImageView) findViewById(R.id.iv_google);
 
+        //set onClick event for auth button
         btnGoogle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 googlePlusClient.getProfile(new GooglePlusClient.GooglePlusResultCallback() {
                     @Override
                     public void onProfileLoaded(GooglePlusProfile googlePlusProfile) {
+                        //after authorization successful you have access to user profile and Access Token
                         tvGoogle.setText(getString(R.string.profileInfo,
                                 googlePlusProfile.getName(),
                                 googlePlusProfile.getId(),
@@ -154,18 +186,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initInstagram() {
-        instagramClient = new InstagramClient(this, getString(R.string.instagramRedirectUri), getString(R.string.instagramClientId));
+        instagramClient = new InstagramClient(this,
+                getString(R.string.instagramRedirectUri), //instagram application redirect uri
+                getString(R.string.instagramClientId)); //instagram application client id
 
+        //init views
         final Button btnInstagram = (Button) findViewById(R.id.btn_instagram);
         final TextView tvInstagram = (TextView) findViewById(R.id.tv_instagram);
         final ImageView ivInstagram = (ImageView) findViewById(R.id.iv_instagram);
 
+        //set onClick event for auth button
         btnInstagram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 instagramClient.getProfile(new InstagramClient.DataLoadedListener<InstagramProfile>() {
                     @Override
                     public void onDataLoaded(InstagramProfile instagramProfile) {
+                        //after authorization successful you have access to user profile and Access Token
                         tvInstagram.setText(getString(R.string.profileInfo,
                                 instagramProfile.getFullName(),
                                 instagramProfile.getId(),
