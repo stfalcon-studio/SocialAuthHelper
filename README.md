@@ -1,5 +1,5 @@
 # SocialAuthHelper
-A library that helps to implement social network authorization(Facebook, Twitter, Instagram, GooglePlus, Vkontakte).
+A library that helps to implement social network authorization (Facebook, Twitter, Instagram, GooglePlus, Vkontakte).
 
 ## Download
 
@@ -20,7 +20,7 @@ or Maven:
 
 ## Usage
 
-If you don't use fabric plugin for Android studio, put into gradle:
+If you don't use fabric plugin for Android studio, put it into gradle:
 ```gradle
 repositories {
     maven { url 'https://maven.fabric.io/public' }
@@ -196,7 +196,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 ###Google+
 Create new application at https://console.developers.google.com/<br />
-Don't forget enable google plus api.<br />
+Don't forget to enable google plus api.<br />
 In your activity(fragment) class declare field:
 ```java
 private GooglePlusClient googlePlusClient;
@@ -241,7 +241,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 ###Instagram
 Create new application at https://www.instagram.com/developer/clients/manage/<br />
-Don't forget enable implicit OAuth in application security settings.
+Don't forget to enable implicit OAuth in application security settings.
 
 In your activity(fragment) class declare field:
 ```java
@@ -287,7 +287,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
-Look [Sample projects] [sample] for more information
+Take a look at [Sample projects] [sample] for more information
 
 ## License 
 
