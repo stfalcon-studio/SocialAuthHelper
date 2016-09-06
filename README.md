@@ -107,16 +107,11 @@ vkClient = new VkClient(this, //activity or fragment
     getString(R.string.vk_client_id)); //vk application clientId
 
 //init views
-final Button btnTwitter = (Button) findViewById(R.id.btn_twitter);
-final TextView tvTwitter = (TextView) findViewById(R.id.tv_twitter);
-final ImageView ivTwitter = (ImageView) findViewById(R.id.iv_twitter);
-
-//set onClick event for auth button
 final Button btnVk = (Button) findViewById(R.id.btn_vk);
-        final TextView tvVk = (TextView) findViewById(R.id.tv_vk);
-        final ImageView ivVk = (ImageView) findViewById(R.id.iv_vk);
-
-        btnVk.setOnClickListener(new View.OnClickListener() {
+final TextView tvVk = (TextView) findViewById(R.id.tv_vk);
+final ImageView ivVk = (ImageView) findViewById(R.id.iv_vk);
+//set onClick event for auth button
+btnVk.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             vkClient.getProfile(new VkClient.DataLoadedListener<VkProfile>() {
