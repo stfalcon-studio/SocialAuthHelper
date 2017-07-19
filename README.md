@@ -295,7 +295,7 @@ Take a look at the [sample projects](sample) for more information
 ## License 
 
 ```
-Copyright 2016 stfalcon.com
+Copyright 2017 stfalcon.com
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
