@@ -47,7 +47,7 @@ dependencies {
     }
 }
 ```
-###Twitter
+### Twitter
 Create new application at https://apps.twitter.com<br />
 Don't forget to enable: "Allow this application to be used to Sign in with Twitter."<br />
 In Application class or initial activity class:
@@ -96,7 +96,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     twitterClient.onActivityResult(requestCode, resultCode, data);
 }
 ```
-###Vkontakte
+### Vkontakte
 Create new application at https://vk.com/dev<br />
 In your activity(fragment) class declare field:
 ```java
@@ -139,7 +139,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     vkClient.onActivityResult(requestCode, resultCode, data);
 }
 ```
-###Facebook
+### Facebook
 Create new application at https://developers.facebook.com/apps<br />
 In AndroidManifest:
 ```xml
@@ -197,7 +197,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
-###Google+
+### Google+
 Create new application at https://console.developers.google.com/<br />
 Don't forget to enable google plus api.<br />
 In your activity(fragment) class declare field:
@@ -242,7 +242,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
-###Instagram
+### Instagram
 Create new application at https://www.instagram.com/developer/clients/manage/<br />
 Don't forget to enable implicit OAuth in application security settings.
 
@@ -290,11 +290,11 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 }
 ```
 
-Take a look at [Sample projects] [sample] for more information
+Take a look at the [sample projects](sample) for more information
 
 ## License 
 
-Copyright 2016 stfalcon.com
+```Copyright 2016 stfalcon.com
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -307,7 +307,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-
+```
 
 [sample]: <https://github.com/stfalcon-studio/SocialAuthHelper/tree/master/sample>
